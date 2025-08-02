@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     // Initializing Variables
     const int correctPin = 1234;
-    int enterpin, balance = 10e5; // ₹1,000,000
+    int enterpin, balance = 1e5;
     int input = 0, amount;
     int attempts = 0;
     const int maxAttempts = 3;
@@ -35,26 +35,26 @@ int main() {
 
                 switch (input) {
                     case 1:
-                        cout << "Your Balance: ₹" << balance << endl;
+                        cout << "Your Balance: " << balance << endl;
                         break;
 
                     case 2:
-                        cout << "Enter Deposit Amount: ₹";
+                        cout << "Enter Deposit Amount: ";
                         cin >> amount;
                         if (amount > 0) {
                             balance += amount;
-                            cout << "Deposited ₹" << amount << " successfully." << endl;
+                            cout << "Deposited " << amount << " successfully." << endl;
                         } else {
                             cout << "Invalid deposit amount." << endl;
                         }
                         break;
 
                     case 3:
-                        cout << "Enter Withdrawal Amount: ₹";
+                        cout << "Enter Withdrawal Amount: ";
                         cin >> amount;
                         if (amount > 0 && amount <= balance) {
                             balance -= amount;
-                            cout << "Withdrawal of ₹" << amount << " successful." << endl;
+                            cout << "Withdrawal of " << amount << " successful." << endl;
                         } else {
                             cout << "Insufficient balance or invalid amount!" << endl;
                         }
@@ -69,7 +69,7 @@ int main() {
                 }
             }
 
-            return 0; // Exit after successful session
+            return 0; 
         } else {
             attempts++;
             cout << "Incorrect PIN. Attempts left: " << (maxAttempts - attempts) << endl;

@@ -24,7 +24,8 @@ int main() {
     int cart[100];
     int cartSize = 0;
 
-    cout << "Greetings!\nWelcome to Dream Mart\n";
+    cout << "Greetings!" << endl;
+    cout << "Welcome to Dream Mart" << endl;
 
     while (userChoice != 0) {
         cout << "\nPlease choose an option:\n";
@@ -34,6 +35,7 @@ int main() {
         cout << "4. Checkout\n";
         cout << "5. Admin - Add Product\n";
         cout << "0. Exit\n";
+        cout << "Your choice: ";
         cin >> userChoice;
 
         switch (userChoice) {
@@ -43,7 +45,7 @@ int main() {
                 } else {
                     cout << "\n--- Product List ---\n";
                     for (int i = 0; i < inventoryCount; i++) {
-                        cout << inventory[i].id << ". " << inventory[i].name << " - ₹" << inventory[i].price << "\n";
+                        cout << inventory[i].id << ". " << inventory[i].name << " - R." << inventory[i].price << "\n";
                     }
                 }
                 break;
@@ -71,11 +73,11 @@ int main() {
                     for (int i = 0; i < cartSize; i++) {
                         Product* product = getProductById(cart[i]);
                         if (product != nullptr) {
-                            cout << product->name << " - ₹" << product->price << "\n";
+                            cout << product->name << " - R." << product->price << "\n";
                             total += product->price;
                         }
                     }
-                    cout << "Total: ₹" << total << "\n";
+                    cout << "Total: R." << total << "\n";
                 }
                 break;
             }
@@ -91,7 +93,7 @@ int main() {
                             total += product->price;
                         }
                     }
-                    cout << "Total Amount Due: " << total << "\n";
+                    cout << "Total Amount Due: R." << total << "\n";
                     cout << "Thank you for shopping with us.\n";
                     cartSize = 0;
                 }
@@ -102,7 +104,7 @@ int main() {
                 Product newProduct;
                 newProduct.id = inventoryCount + 1;
                 cout << "Enter product name: ";
-                cin.ignore();
+                cin.ignore(); 
                 getline(cin, newProduct.name);
                 cout << "Enter product price: ";
                 cin >> newProduct.price;

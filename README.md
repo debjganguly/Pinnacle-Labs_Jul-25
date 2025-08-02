@@ -26,19 +26,7 @@ A fully functional ATM simulator allowing:
 
 ---
 
-### 2. ❓ Online Quiz Application
-An interactive quiz platform featuring:
-- Multiple choice questions
-- Time-limited quizzes (basic timer logic)
-- Random question order
-- Scoring and grading system
-- Replay option and leaderboard system (using file I/O)
-
-> 💡 Built with: Arrays, Conditionals, Loops, File I/O
-
----
-
-### 3. 🛍️ Basic E-commerce System
+### 2. 🛍️ Basic E-commerce System
 A console-based e-commerce simulation that includes:
 - Product browsing
 - Add to cart functionality
